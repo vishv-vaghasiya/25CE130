@@ -3,32 +3,25 @@
 main()
 {
     int i,j;
-    int start=1,end=9;
 
-
-    for(i=start;i<=end;i++)
+    for(i=1;i<=9;i++)
     {
-        printf("%d  ",i);
+        printf("%d",i);
     }
     printf("\n");
 
     for(i=2;i<=5;i++)
     {
-        for(j=1;j<=i;j++)
+        for(j=1;j<=9;j++)
         {
-            printf("  ");
-        }
-        printf("%d",i);
-
-         int spaces=(end-2*i+1)*2;
-
-        if(spaces>0)
-        {
-            for(j=0;j<spaces;j++)
+            if(j==i||j==10-i)
+            {
+                printf("%d",j);
+            }
+            else
             {
                 printf(" ");
             }
-            printf("%d",end-i+1);
         }
         printf("\n");
     }
