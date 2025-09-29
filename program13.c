@@ -13,6 +13,9 @@ main()
             printf("(TANK IS FULL)");
         }
 
+        sleep(1);
+
         printf("\n");
     }
 }
+
