@@ -1,14 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 
-// UDFs
 int checkAvailability(char books[][50], int available[], int n, char title[]) {
     for (int i = 0; i < n; i++) {
         if (strcmp(books[i], title) == 0) {
-            return available[i];  // 1 = available, 0 = borrowed
+            return available[i];
         }
     }
-    return -1; // not found
+    return -1;
 }
 
 void borrowBook(char books[][50], int available[], int n, char title[]) {
@@ -41,7 +40,7 @@ void returnBook(char books[][50], int available[], int n, char title[]) {
 
 float calculateFine(int daysLate) {
     if (daysLate < 0) return 0;
-    return daysLate * 2.0;  // ₹2 per day
+    return daysLate * 2.0;
 }
 
 void displayBooks(char books[][50], int available[], int n) {
@@ -52,10 +51,9 @@ void displayBooks(char books[][50], int available[], int n) {
     printf("\n");
 }
 
-// Main function
 int main() {
     char books[5][50] = {"C Programming", "Data Structures", "Algorithms", "DBMS", "AI Basics"};
-    int available[5] = {1, 1, 1, 1, 1};  // all available
+    int available[5] = {1, 1, 1, 1, 1};
     int n = 5;
 
     int choice, days;
@@ -111,3 +109,4 @@ int main() {
         }
     }
 }
+
